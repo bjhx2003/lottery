@@ -46,7 +46,8 @@ lottery.on('start',function(next){
 ```javascript
 var lottery = new Lottery.Dial(document.getElementById('js_pointer'), {
         speed: 30, //每帧速度
-        areaNumber: 8 //奖区数量
+        areaNumber: 8, //奖区数量
+        deviation: 2 //随机结果角度偏差值 为了防止出现指针和扇区分割线无限重合 单位:°
     });
     var index = -1;
     lottery.on('start', function (next) {
